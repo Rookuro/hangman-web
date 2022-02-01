@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="css/style.css" type="text/css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <title>Hang-Dertale</title>
+</head>
+<body>
+<div class="hangman-block-all">
+  <div class="hangman-button">
+    <a href="#">Difficulté 1</a>
+    <a href="#">Difficulté 2</a>
+    <a href="#">Difficulté 3</a>
+  </div>
+  <h1>Bienvenue sur le Hang-Dertale</h1>
+  <div class="pendu">
+    <pre>{{ .VarLines}}</pre>
+  </div>
+<div class="border">
+  <p>{{ .Hidewords}} <img src="" alt=""></p>
+</div>
+<div class="hangman-DUO">
+  <div class="hangman-MO">
+    <p>Mot utilisé:{{ .UseWords}}</p>
+  </div>
+  <div class="hangman-HP">
+    <p>Nombre de vie: {{ .Life}} / 10</p>
+  </div>
+</div>
+  <div class="hamgman-block-form">
+    <form method="POST" action="/hangman">
+        <h class="title1">Rentrer une lettre:</h><br/>
+        <input type="text" name="lettre" autocomplete="off"><br/>
+        <input type="submit">
+    </form>
+
+  </div>
+</div>  
+  <script type="text/javascript">(function(){window['__CF$cv$params']={r:'6d6d423779b73a4d',m:'5w08rKqUf7t3mvBY_LBRMJpY9IvciAlmd_sMved6Bto-1643740307-0-ATN9zJWFUnFLJmB5E51un/BXKX2mTq9Vz67rMKR1eofYpumU+o8gLlknNhXtqhR9g8QDC9zVp69qWzcHIMO/zOG9iKYn1Uy9zH9Gjns/n45KKhqRs4I2xoT+kcF1c4bmLhhoaUL7VfPerGQwGyEOk96qmQiRBI0NYITkWj9603FiX4rke2FmxH69cAqlFK6VOmhEsRozMH5GX5sEaR6uU4c=',s:[0x91c33868c2,0x3a3db8d7f4],}})();</script>
+</body>
