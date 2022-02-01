@@ -4,15 +4,16 @@ import (
 	"hangman"
 	"html/template"
 	"net/http"
+	"strings"
 )
 
 type User struct {
 	Interaction string
 	Success     bool
-	Hidewords   []string
+	Hidewords   string
 	Life        int
 	UseWords    []string
-	VarLines    []string
+	VarLines    string
 	Win         bool
 	Loose       bool
 }
@@ -30,7 +31,7 @@ func main() {
 
 func Accueil(w http.ResponseWriter, r *http.Request) {
 	var details User
-	tmpl1 := template.Must(template.ParseFiles("register.html"))
+	tmpl1 := template.Must(template.ParseFiles("index.html"))
 	if hangman.Victory() {
 		details = User{
 			Win: true,
@@ -42,10 +43,10 @@ func Accueil(w http.ResponseWriter, r *http.Request) {
 	} else {
 		details = User{
 			Interaction: r.FormValue("lettre"),
-			Hidewords:   hangman.Hidewords,
+			Hidewords:   strings.Join(hangman.Hidewords, " "),
 			Life:        hangman.Vie,
 			UseWords:    hangman.UseWords,
-			VarLines:    hangman.VarLines,
+			VarLines:    strings.Join(hangman.VarLines, ""),
 			Success:     true,
 			Win:         false,
 			Loose:       false,
