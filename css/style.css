@@ -4,87 +4,72 @@ body {
     font-family: "Press Start 2P";
 }
 
-.border {
-    display: flex;
-    justify-content: center;
+.title {
+    margin-top: 4%;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.hangman-block-all {
+    width: 100%;
+}
+
+.pendu pre{
+    display: inline-block;
+    border: 5px solid white; 
+    padding: 2%;
+}
+
+.border p {
+    display: inline-block;
     border: 5px solid white;
-    height: auto;
-    width: 48%;
-    margin-left: 30%;
-    margin-top: 5%;
+    padding: 10% 20% 10% 20%;
 }
 
-.hangman-button a{
-    text-decoration: none;
+.hangman-block-all, .hangman-block-all button  {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: center;
+}
+
+.button {
     color: white;
-    width: 10%;
+    text-decoration: none;
     border: 3px solid white;
-    padding: 1%;
+    width: 20%;
+    padding: 2% 2% 2% 2%;
 }
 
-.hangman-button a:first-child{
-   margin-bottom: 1%;
+.button a:focus{
+    color: black;
+    background-color: white;
 }
 
-.hangman-button a:last-child{
+
+#button1{
+    
+    margin-bottom: 1%;
+}
+
+#button3{
     margin-top: 1%;
 }
 
-.hangman-button a:focus{
+.hangman-button a:visited{
     background-color: white;
     color: black;
 }
 
-
 .hangman-DUO {
     display: flex;
-    justify-content: space-between;
-    
+    justify-content: space-evenly;
+
 }
 
-.hangman-MO {
-    margin-left: 30%;
-    margin-top: 1%;
-    font-size: 10px;
-}
-
-.hangman-HP {
-    margin-right: 27%;
-    margin-top: 1%;
-    font-size: 10px;
-}
-
-h1 {
-    margin-left: 27%;
-}
-
-.border p {
-    font-size: 40px;
-    margin-top: 9%;
-    margin-left: 4%;
-}
-
-.hangman-button {
-    display: flex;
-    flex-direction: column;
-}
-
-.pendu pre {
-    font-family: "Press Start 2P";
-    margin-left: 47%;
-    border: 5px solid white;
-    padding: 1% 1% 1% 1%;
-    width: 8%;
-}
-
-.hamgman-block-form {
-    margin-left: 45%;
-    margin-top: 1%;
-}
 
 input[type=submit] {
     margin-top: 1%;
-    margin-left: 5%;
     background-color: black;
     color: white;
     padding: 1%;
@@ -93,7 +78,7 @@ input[type=submit] {
 }
 
 input[type=text]{
-    margin-left: 1%;
+    
     margin-top: 2%;
     padding: 1% 0% 1% 0%;
     background-color: black;
@@ -103,6 +88,3 @@ input[type=text]{
     font-family: "Press Start 2P";
 }
 
-.title1 {
-    margin-right: 4%;
-}
